@@ -32,42 +32,21 @@ class TSP_WIN(object):
 
       def initCitys(self):
             self.citys = []
-
-            #中国34城市经纬度
-            self.citys.append((116.46, 39.92))
-            self.citys.append((117.2,39.13))
-            self.citys.append((121.48, 31.22))
-            self.citys.append((106.54, 29.59))
-            self.citys.append((91.11, 29.97))
-            self.citys.append((87.68, 43.77))
-            self.citys.append((106.27, 38.47))
-            self.citys.append((111.65, 40.82))
-            self.citys.append((108.33, 22.84))
-            self.citys.append((126.63, 45.75))
-            self.citys.append((125.35, 43.88))
-            self.citys.append((123.38, 41.8))
-            self.citys.append((114.48, 38.03))
-            self.citys.append((112.53, 37.87))
-            self.citys.append((101.74, 36.56))
-            self.citys.append((117,36.65))
-            self.citys.append((113.6,34.76))
-            self.citys.append((118.78, 32.04))
-            self.citys.append((117.27, 31.86))
-            self.citys.append((120.19, 30.26))
-            self.citys.append((119.3, 26.08))
-            self.citys.append((115.89, 28.68))
-            self.citys.append((113, 28.21))
-            self.citys.append((114.31, 30.52))
-            self.citys.append((113.23, 23.16))
-            self.citys.append((121.5, 25.05))
-            self.citys.append((110.35, 20.02))
-            self.citys.append((103.73, 36.03))
-            self.citys.append((108.95, 34.27))
-            self.citys.append((104.06, 30.67))
-            self.citys.append((106.71, 26.57))
-            self.citys.append((102.73, 25.04))
-            self.citys.append((114.1, 22.2))
-            self.citys.append((113.33, 22.13))
+        # 这个文件里是34个城市的经纬度
+        f = open("./data/distanceMatrix.txt", "r")
+        while True:
+            # 一行一行读取
+            loci = str(f.readline())
+            if loci:
+                pass  # do something here
+            else:
+                break
+            # 用readline读取末尾总会有一个回车，用replace函数删除这个回车
+            loci = loci.replace("\n", "")
+            # 按照tab键分割
+            loci = loci.split("\t")
+            # 中国34城市经纬度读入citys
+            self.citys.append((float(loci[1]), float(loci[2]), loci[0]))
 
             #坐标变换
             minX, minY = self.citys[0][0], self.citys[0][1]
