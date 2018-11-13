@@ -91,9 +91,14 @@ class TSP(object):
             while n > 0:
                   self.ga.next()
                   distance = self.distance(self.ga.best.gene)
-                  print (("%d : %f") % (self.ga.generation, distance))
+                  print (("%d : %f") % (self.ga.generation - 1, distance - 1))
                   n -= 1
-
+            print "经过%d次迭代，最优解距离为：%f" % (self.ga.generation - 1, distance - 1)
+            print "遍历城市顺序为：",
+            # print "遍历城市顺序为：", self.ga.best.gene
+            # 打印出我们挑选出的这个序列中
+            for i in self.ga.best.gene:
+                print self.citys[i][2],
 
 def main():
       tsp = TSP()
