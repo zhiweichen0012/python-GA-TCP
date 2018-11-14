@@ -34,7 +34,7 @@ class TSP(object):
     def initCitys(self):
         self.citys = []
         # 这个文件里是34个城市的经纬度
-        f = open("distanceMatrix.txt", "r")
+        f = open("../data/distanceMatrix.txt", "r")
         while True:
             # 一行一行读取
             loci = str(f.readline())
