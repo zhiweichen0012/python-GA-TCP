@@ -1,12 +1,10 @@
-# TSP问题的求解方法
-
+# 旅行商问题之遗传算法（python版）
 
 *  **data**.C-TSP问题中国34个城市的经纬度。
 *  **ga**.遗传算法求解TSP问题代码。
 
-[Blog:http://blog.5long.me](http://blog.5long.me)
 
-TSP问题博文链接：<http://blog.5long.me/2015/genetic-algorithm-on-tsp/>
+对应博文链接：<https://blog.csdn.net/zw__chen/article/details/84074000>
 
 ## License
 
