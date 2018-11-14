@@ -7,6 +7,6 @@ class Life(object):
       """个体类"""
       def __init__(self, aGene = None):
             self.gene = aGene
-            self.score = SCORE_NONE
+            self.score = SCORE_NONE #分数
 
 
