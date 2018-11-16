@@ -82,11 +82,11 @@ class TSP(object):
             print (("%d : %f") % (self.ga.generation, distance))
             n -= 1
         print "经过%d次迭代，最优解距离为：%f" % (self.ga.generation, distance - 1)
-        print "遍历城市顺序为：",
+        print "遍历城市顺序为："
         # print "遍历城市顺序为：", self.ga.best.gene
         # 打印出我们挑选出的这个序列中
         for i in self.ga.best.gene:
-            print self.citys[i][2],
+            print self.citys[i][2]
 
 
 def main():
